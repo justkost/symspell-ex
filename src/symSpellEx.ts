@@ -118,7 +118,7 @@ export class SymSpellEx {
         const iLanguage = language || this._language;
         const iMaxDistance = maxDistance || this._maxDistance;
         const iMaxSuggestions = maxSuggestions || this._maxSuggestions;
-        const iTerm = term.toLowerCase().trim();
+        const iTerm = term.trim();
         const iLength = iTerm.length;
         const maxKeyLength = await this.store.maxEntryLength();
 
@@ -248,7 +248,7 @@ export class SymSpellEx {
 
         const iLanguage = language || this._language;
         const iMaxDistance = maxDistance || this._maxDistance;
-        const iTerm = term.toLowerCase().trim();
+        const iTerm = term.trim();
         if(iLanguage !== this._language) {
             await this.store.setLanguage(iLanguage);
         }
